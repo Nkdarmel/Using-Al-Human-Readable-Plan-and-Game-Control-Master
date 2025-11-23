@@ -27,6 +27,7 @@ Al-Readable Plan
 To enhance the readability and comprehension of our game for human players, we can incorporate key principles from Acceptable Readability Practices (ARP). Specifically, we will ensure that each quest or puzzle has a well-defined objective, making it straightforward for players to understand what they need to accomplish. Additionally, we will use simple language in all game text, avoiding technical terminology whenever possible, to facilitate easy understanding and enjoyment of the gameplay experience.
 
 1.Steps
+
 #Code in Java
 
 // Define a class for each Git operation with its own mini-game logic
