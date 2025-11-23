@@ -27,14 +27,13 @@ Al-Readable Plan
 To enhance the readability and comprehension of our game for human players, we can incorporate key principles from Acceptable Readability Practices (ARP). Specifically, we will ensure that each quest or puzzle has a well-defined objective, making it straightforward for players to understand what they need to accomplish. Additionally, we will use simple language in all game text, avoiding technical terminology whenever possible, to facilitate easy understanding and enjoyment of the gameplay experience.
 
 1.Steps
-Code in Java
+#Code in Java
 
 // Define a class for each Git operation with its own mini-game logic
 class BranchingGame {
 constructor() {
 this.branches = [];
 }
-
 createBranch(branchName) {
 if (!this.branchExists(branchName)) {
 this.branches.push(branchName);
@@ -43,7 +42,6 @@ console.log(`Created branch: ${branchName}`);
 console.log(`Branch already exists: ${branchName}`);
 }
 }
-
 mergeBranch(source, target) {
 if (this.branchExists(target)) {
 console.log(`Merged ${source} into ${target}`);
@@ -51,17 +49,14 @@ console.log(`Merged ${source} into ${target}`);
 console.log(`${target} branch does not exist`);
 }
 }
-
 branchExists(branchName) {
 return this.branches.includes(branchName);
 }
 }
-
 class CommittingGame {
 constructor() {
 this.commits = [];
 }
-
 commit(message) {
 if (message.trim()) {
 this.commits.push({ message, timestamp: new Date().toISOString() });
@@ -70,12 +65,10 @@ console.log(`Committed with message: ${message}`);
 console.log('Commit message cannot be empty');
 }
 }
-
 getCommits() {
 return this.commits;
 }
 }
-
 // Implement Dora metrics tracking
 class DoraMetricsTracker {
 constructor() {
@@ -84,29 +77,24 @@ this.successfulBranches = 0;
 this.successfulMerges = 0;
 this.totalCommits = 0;
 }
-
 trackGameSession() {
 this.gameSessions++;
 }
-
 trackSuccessfulBranch(branchName) {
 if (branchName.trim()) {
 this.successfulBranches++;
 }
 }
-
 trackSuccessfulMerge(source, target) {
 if (source.trim() && target.trim()) {
 this.successfulMerges++;
 }
 }
-
 trackCommit(message) {
 if (message.trim()) {
 this.totalCommits++;
 }
 }
-
 getMetrics() {
 return {
 gameSessions: this.gameSessions,
@@ -116,7 +104,6 @@ totalCommits: this.totalCommits
 };
 }
 }
-
 // Integrate DevOps best practices (e.g., code review, continuous integration)
 class GitKrakenQuest {
 constructor() {
@@ -124,13 +111,11 @@ this.branchingGame = new BranchingGame();
 this.committingGame = new CommittingGame();
 this.doraMetricsTracker = new DoraMetricsTracker();
 }
-
 playBranchingMiniGame(branchName) {
 this.branchingGame.createBranch(branchName);
 this.doraMetricsTracker.trackSuccessfulBranch(branchName);
 this.doraMetricsTracker.trackGameSession();
 }
-
 playCommittingMiniGame(message) {
 this.committingGame.commit(message);
 this.doraMetricsTracker.trackCommit(message);
@@ -148,7 +133,7 @@ game.playBranchingMiniGame('feature-branch');
 game.playCommittingMiniGame('Initial commit');
 console.log(game.getDoraMetrics());
 
-2.Steps
+#2.Steps
 
 Code in Java
 
