@@ -30,196 +30,196 @@ To enhance the readability and comprehension of our game for human players, we c
 
 #Code in Java
 
-// Define a class for each Git operation with its own mini-game logic
-class BranchingGame {
-constructor() {
-this.branches = [];
-}
-createBranch(branchName) {
-if (!this.branchExists(branchName)) {
-this.branches.push(branchName);
-console.log(`Created branch: ${branchName}`);
-} else {
-console.log(`Branch already exists: ${branchName}`);
-}
-}
-mergeBranch(source, target) {
-if (this.branchExists(target)) {
-console.log(`Merged ${source} into ${target}`);
-} else {
-console.log(`${target} branch does not exist`);
-}
-}
-branchExists(branchName) {
-return this.branches.includes(branchName);
-}
-}
-class CommittingGame {
-constructor() {
-this.commits = [];
-}
-commit(message) {
-if (message.trim()) {
-this.commits.push({ message, timestamp: new Date().toISOString() });
-console.log(`Committed with message: ${message}`);
-} else {
-console.log('Commit message cannot be empty');
-}
-}
-getCommits() {
-return this.commits;
-}
-}
-// Implement Dora metrics tracking
-class DoraMetricsTracker {
-constructor() {
-this.gameSessions = 0;
-this.successfulBranches = 0;
-this.successfulMerges = 0;
-this.totalCommits = 0;
-}
-trackGameSession() {
-this.gameSessions++;
-}
-trackSuccessfulBranch(branchName) {
-if (branchName.trim()) {
-this.successfulBranches++;
-}
-}
-trackSuccessfulMerge(source, target) {
-if (source.trim() && target.trim()) {
-this.successfulMerges++;
-}
-}
-trackCommit(message) {
-if (message.trim()) {
-this.totalCommits++;
-}
-}
-getMetrics() {
-return {
-gameSessions: this.gameSessions,
-successfulBranches: this.successfulBranches,
-successfulMerges: this.successfulMerges,
-totalCommits: this.totalCommits
-};
-}
-}
-// Integrate DevOps best practices (e.g., code review, continuous integration)
-class GitKrakenQuest {
-constructor() {
-this.branchingGame = new BranchingGame();
-this.committingGame = new CommittingGame();
-this.doraMetricsTracker = new DoraMetricsTracker();
-}
-playBranchingMiniGame(branchName) {
-this.branchingGame.createBranch(branchName);
-this.doraMetricsTracker.trackSuccessfulBranch(branchName);
-this.doraMetricsTracker.trackGameSession();
-}
-playCommittingMiniGame(message) {
-this.committingGame.commit(message);
-this.doraMetricsTracker.trackCommit(message);
-this.doraMetricsTracker.trackGameSession();
-}
-
-getDoraMetrics() {
-return this.doraMetricsTracker.getMetrics();
-}
-}
-
-// Example usage
-const game = new GitKrakenQuest();
-game.playBranchingMiniGame('feature-branch');
-game.playCommittingMiniGame('Initial commit');
-console.log(game.getDoraMetrics());
-
-#2.Steps
-
-Code in Java
-
+	// Define a class for each Git operation with its own mini-game logic
+	class BranchingGame {
+	constructor() {
+	this.branches = [];
+	}
+	createBranch(branchName) {
+	if (!this.branchExists(branchName)) {
+	this.branches.push(branchName);
+	console.log(`Created branch: ${branchName}`);
+	} else {
+	console.log(`Branch already exists: ${branchName}`);
+	}
+	}
+	mergeBranch(source, target) {
+	if (this.branchExists(target)) {
+	console.log(`Merged ${source} into ${target}`);
+	} else {
+	console.log(`${target} branch does not exist`);
+	}
+	}
+	branchExists(branchName) {
+	return this.branches.includes(branchName);
+	}
+	}
+	class CommittingGame {
+	constructor() {
+	this.commits = [];
+	}
+	commit(message) {
+	if (message.trim()) {
+	this.commits.push({ message, timestamp: new Date().toISOString() });
+	console.log(`Committed with message: ${message}`);
+	} else {
+	console.log('Commit message cannot be empty');
+	}
+	}
+	getCommits() {
+	return this.commits;
+	}
+	}
+	// Implement Dora metrics tracking
+	class DoraMetricsTracker {
+	constructor() {
+	this.gameSessions = 0;
+	this.successfulBranches = 0;
+	this.successfulMerges = 0;
+	this.totalCommits = 0;
+	}
+	trackGameSession() {
+	this.gameSessions++;
+	}
+	trackSuccessfulBranch(branchName) {
+	if (branchName.trim()) {
+	this.successfulBranches++;
+	}
+	}
+	trackSuccessfulMerge(source, target) {
+	if (source.trim() && target.trim()) {
+	this.successfulMerges++;
+	}
+	}
+	trackCommit(message) {
+	if (message.trim()) {
+	this.totalCommits++;
+	}
+	}
+	getMetrics() {
+	return {
+	gameSessions: this.gameSessions,
+	successfulBranches: this.successfulBranches,
+	successfulMerges: this.successfulMerges,
+	totalCommits: this.totalCommits
+	};
+	}
+	}
+	// Integrate DevOps best practices (e.g., code review, continuous integration)
+	class GitKrakenQuest {
+	constructor() {
+	this.branchingGame = new BranchingGame();
+	this.committingGame = new CommittingGame();
+	this.doraMetricsTracker = new DoraMetricsTracker();
+	}
+	playBranchingMiniGame(branchName) {
+	this.branchingGame.createBranch(branchName);
+	this.doraMetricsTracker.trackSuccessfulBranch(branchName);
+	this.doraMetricsTracker.trackGameSession();
+	}
+	playCommittingMiniGame(message) {
+	this.committingGame.commit(message);
+	this.doraMetricsTracker.trackCommit(message);
+	this.doraMetricsTracker.trackGameSession();
+	}
 	
-// Import necessary libraries for 3D graphics (e.g., Three.js)
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-// Define a class for each Git operation with its own mini-game logic in 3D
-class BranchingGame {
-constructor() {
-this.scene = new THREE.Scene();
-this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-this.renderer = new THREE.WebGLRenderer();
-this.renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(this.renderer.domElement);
-
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-this.branchObject = new THREE.Mesh(geometry, material);
-this.scene.add(this.branchObject);
-
-this.camera.position.z = 5;
-
-const controls = new OrbitControls(this.camera, this.renderer.domElement);
-}
-
-createBranch(branchName) {
-if (!this.branchExists(branchName)) {
-console.log(`Created branch: ${branchName}`);
-// Add visual representation of the branch in the game
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-this.branchObject = new THREE.Mesh(geometry, material);
-this.scene.add(this.branchObject);
-} else {
-console.log(`Branch already exists: ${branchName}`);
-}
-}
-
-mergeBranch(source, target) {
-if (this.branchExists(target)) {
-console.log(`Merged ${source} into ${target}`);
-// Add visual representation of the merge in the game
-} else {
-console.log(`${target} branch does not exist`);
-}
-}
-
-branchExists(branchName) {
-return this.scene.children.some(child => child.name === branchName);
-}
-
-animate() {
-requestAnimationFrame(this.animate.bind(this));
-this.renderer.render(this.scene);
-}
-}
-
-// Integrate DevOps best practices (e.g., code review, continuous integration)
-class GitKrakenQuest {
-constructor() {
-this.branchingGame = new BranchingGame();
-}
-
-playBranchingMiniGame(branchName) {
-this.branchingGame.createBranch(branchName);
-}
-
-getDoraMetrics() {
-// Implement Dora metrics tracking (e.g., code review, continuous integration)
-return {
-gameSessions: 1,
-successfulBranches: 1,
-successfulMerges: 0,
-totalCommits: 0
-};
-}
-}
-
-// Example usage
-const game = new GitKrakenQuest();
-game.playBranchingMiniGame('feature-branch');
-console.log(game.getDoraMetrics());
-
+	getDoraMetrics() {
+	return this.doraMetricsTracker.getMetrics();
+	}
+	}
+	
+	// Example usage
+	const game = new GitKrakenQuest();
+	game.playBranchingMiniGame('feature-branch');
+	game.playCommittingMiniGame('Initial commit');
+	console.log(game.getDoraMetrics());
+	
+	#2.Steps
+	
+	Code in Java
+	
+		
+	// Import necessary libraries for 3D graphics (e.g., Three.js)
+	import * as THREE from 'three';
+	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+	
+	// Define a class for each Git operation with its own mini-game logic in 3D
+	class BranchingGame {
+	constructor() {
+	this.scene = new THREE.Scene();
+	this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+	this.renderer = new THREE.WebGLRenderer();
+	this.renderer.setSize(window.innerWidth, window.innerHeight);
+	document.body.appendChild(this.renderer.domElement);
+	
+	const geometry = new THREE.BoxGeometry();
+	const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+	this.branchObject = new THREE.Mesh(geometry, material);
+	this.scene.add(this.branchObject);
+	
+	this.camera.position.z = 5;
+	
+	const controls = new OrbitControls(this.camera, this.renderer.domElement);
+	}
+	
+	createBranch(branchName) {
+	if (!this.branchExists(branchName)) {
+	console.log(`Created branch: ${branchName}`);
+	// Add visual representation of the branch in the game
+	const geometry = new THREE.BoxGeometry();
+	const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+	this.branchObject = new THREE.Mesh(geometry, material);
+	this.scene.add(this.branchObject);
+	} else {
+	console.log(`Branch already exists: ${branchName}`);
+	}
+	}
+	
+	mergeBranch(source, target) {
+	if (this.branchExists(target)) {
+	console.log(`Merged ${source} into ${target}`);
+	// Add visual representation of the merge in the game
+	} else {
+	console.log(`${target} branch does not exist`);
+	}
+	}
+	
+	branchExists(branchName) {
+	return this.scene.children.some(child => child.name === branchName);
+	}
+	
+	animate() {
+	requestAnimationFrame(this.animate.bind(this));
+	this.renderer.render(this.scene);
+	}
+	}
+	
+	// Integrate DevOps best practices (e.g., code review, continuous integration)
+	class GitKrakenQuest {
+	constructor() {
+	this.branchingGame = new BranchingGame();
+	}
+	
+	playBranchingMiniGame(branchName) {
+	this.branchingGame.createBranch(branchName);
+	}
+	
+	getDoraMetrics() {
+	// Implement Dora metrics tracking (e.g., code review, continuous integration)
+	return {
+	gameSessions: 1,
+	successfulBranches: 1,
+	successfulMerges: 0,
+	totalCommits: 0
+	};
+	}
+	}
+	
+	// Example usage
+	const game = new GitKrakenQuest();
+	game.playBranchingMiniGame('feature-branch');
+	console.log(game.getDoraMetrics());
+	
 
 DevOps Code Integration
 
