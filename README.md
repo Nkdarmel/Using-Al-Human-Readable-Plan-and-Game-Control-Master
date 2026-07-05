@@ -134,9 +134,9 @@ To enhance the readability and comprehension of our game for human players, we c
 	game.playCommittingMiniGame('Initial commit');
 	console.log(game.getDoraMetrics());
 	
-	#2.Steps
+#2.Steps
 	
-	Code in Java
+Code in Java
 	
 		
 	// Import necessary libraries for 3D graphics (e.g., Three.js)
